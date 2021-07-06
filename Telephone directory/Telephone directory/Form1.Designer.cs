@@ -29,7 +29,7 @@ namespace Telephone_directory
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.Refresh_table_button = new System.Windows.Forms.Button();
             this.Search_button = new System.Windows.Forms.Button();
             this.Add_button = new System.Windows.Forms.Button();
@@ -39,18 +39,18 @@ namespace Telephone_directory
             this.Phone_number = new System.Windows.Forms.TextBox();
             this.Mail = new System.Windows.Forms.TextBox();
             this.Save_button = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(618, 433);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowTemplate.Height = 25;
+            this.dataGridView.Size = new System.Drawing.Size(618, 433);
+            this.dataGridView.TabIndex = 0;
             // 
             // Refresh_table_button
             // 
@@ -62,6 +62,7 @@ namespace Telephone_directory
             this.Refresh_table_button.TabIndex = 1;
             this.Refresh_table_button.Text = "Resfresh table";
             this.Refresh_table_button.UseVisualStyleBackColor = false;
+            this.Refresh_table_button.Click += new System.EventHandler(this.Refresh_table_button_Click);
             // 
             // Search_button
             // 
@@ -157,9 +158,9 @@ namespace Telephone_directory
             this.Controls.Add(this.Add_button);
             this.Controls.Add(this.Search_button);
             this.Controls.Add(this.Refresh_table_button);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView);
             this.Text = "Refresh table";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,7 +168,7 @@ namespace Telephone_directory
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button Refresh_table_button;
         private System.Windows.Forms.Button Search_button;
         private System.Windows.Forms.Button Add_button;
