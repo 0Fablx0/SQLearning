@@ -16,5 +16,9 @@ namespace Telephone_directory.Manager
         void SetObj();
 
     }
-
+    interface IDBCounter
+    {
+        int ColumnCnt();
+        int RowCnt();
+    }
 }

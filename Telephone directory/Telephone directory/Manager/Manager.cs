@@ -38,4 +38,17 @@ namespace Telephone_directory.Manager
             throw new NotImplementedException();
         }
     }
+
+    class DBSize : IDBCounter
+    {
+        public int ColumnCnt()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int RowCnt()
+        {
+            
+        }
+    }
 }

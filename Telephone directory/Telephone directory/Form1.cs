@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telephone_directory.Manager;
 
 namespace Telephone_directory
 {
@@ -14,6 +15,11 @@ namespace Telephone_directory
     {
         void TableForm()
         {
+            IDBCounter CntManager = new DBSize();
+
+            dataGridView.ColumnCount = CntManager.ColumnCnt();
+            dataGridView.RowCount = CntManager.RowCnt();
+
             string[] head = new string[]
             {
                 "Id",
